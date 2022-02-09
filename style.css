@@ -4,3 +4,20 @@
   font-family: 'Lato', sans-serif;
 }
 
+body{
+  background-color: rgb(192, 226, 226);
+  width: 100vw;
+  min-height: 100vh;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container{
+  min-width: 80vw;
+}
+
+.container-progress{
+  display: flex;
+  justify-content: space-around;
+}
