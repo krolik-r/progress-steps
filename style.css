@@ -1,24 +1,59 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap');
-*{
-  box-sizing: border-box;
-  font-family: 'Lato', sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap");
+
+:root {
+  --z-index-progress: -1;
+  --font-size: 22px;
 }
 
-body{
+* {
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+}
+
+body {
   background-color: rgb(192, 226, 226);
+  font-size: var(--font-size);
   width: 100vw;
   min-height: 100vh;
-  display:flex;
+  display: flex;
   justify-content: center;
   align-items: center;
+  margin: 0;
 }
 
-.container{
-  min-width: 80vw;
+.container {
+  text-align: center;
 }
 
-.container-progress{
+.container-progress {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  position: relative;
+  max-width: 100%;
+  width: 40rem;
+  margin-bottom: 2rem;
+}
+
+.container-progress::before {
+  content: " ";
   position: absolute;
+  background-color: #aaa;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 0.13em;
+  transform: translateY(-50%);
+  z-index: var(--z-index-progress);
+}
+
+.progress {
+  position: absolute;
+  background-color: #f0f;
+  top: 50%;
+  left: 0;
+  width: 0%;
+  height: 0.1em;
+  transform: translateY(-50%);
+  transition: width 0.5 linear;
+  z-index: var(--z-index-progress);
 }
